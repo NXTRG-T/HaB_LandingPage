@@ -17,6 +17,23 @@
     .gradient {
       background: linear-gradient(90deg, #035003 25%, #107907 100%);
     }
+
+    .product {
+      border-bottom: 1px solid #ccc;
+      padding-bottom: 1rem;
+      padding-top: 1rem;
+    }
+
+    @media (max-width: 639px) {
+      .add-container {
+        display: flex;
+        flex-direction: column;
+      }
+
+      .add-to-card {
+        margin-top: 1rem;
+      }
+    }
   </style>
 </head>
 
@@ -556,14 +573,17 @@
 
   <!--Sản phẩm-->
   <section class="py-8 bg-white md:py-16 dark:bg-gray-900 antialiased" id="productList">
-    <div class="max-w-screen-xl px-4 mx-auto 2xl:px-0">
+    <!--Sản phẩm 1-->
+    <div class="max-w-screen-xl px-4 mx-auto 2xl:px-0 product">
       <div class="lg:grid lg:grid-cols-2 lg:gap-8 xl:gap-16">
         <div class="shrink-0 max-w-md lg:max-w-lg mx-auto">
           <img class="w-full dark:hidden" src="./images/POWERSURE_CANXI_D3.png" alt="" />"
         </div>
 
         <div class="mt-6 sm:mt-8 lg:mt-0">
-          <h4 class="text-gray-900 dark:text-white">Thực phẩm bảo vệ sức khỏe</h4>
+          <h4 class="text-gray-900 dark:text-white">
+            Thực phẩm bảo vệ sức khỏe
+          </h4>
           <h1 class="text-xl font-semibold text-gray-900 sm:text-5xl dark:text-white">
             POWERSURE CANXI D3
           </h1>
@@ -605,12 +625,12 @@
               </p>
               <a href="#"
                 class="text-sm font-medium leading-none text-gray-900 underline hover:no-underline dark:text-white">
-                345 Reviews
+                93,688 Reviews
               </a>
             </div>
           </div>
 
-          <div class="mt-6 sm:gap-4 sm:items-center sm:flex sm:mt-8">
+          <div class="mt-6 sm:gap-4 sm:items-center sm:flex sm:mt-8 add-container">
             <a href="#" title=""
               class="flex items-center justify-center py-2.5 px-5 text-sm font-medium text-gray-900 focus:outline-none bg-white rounded-lg border border-gray-200 hover:bg-gray-100 hover:text-primary-700 focus:z-10 focus:ring-4 focus:ring-gray-100 dark:focus:ring-gray-700 dark:bg-gray-800 dark:text-gray-400 dark:border-gray-600 dark:hover:text-white dark:hover:bg-gray-700"
               role="button">
@@ -622,7 +642,7 @@
               Add to favorites
             </a>
             <button type="button"
-              class="flex items-center justify-center text-white bg-blue-700 hover:bg-blue-800 focus:outline-none focus:ring-4 focus:ring-blue-300 font-medium rounded-full text-sm px-5 py-2.5 text-center me-2 mb-2 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">
+              class="add-to-card flex items-center justify-center text-white bg-blue-700 hover:bg-blue-800 focus:outline-none focus:ring-4 focus:ring-blue-300 font-medium rounded-full text-sm px-5 py-2.5 text-center me-2 mb-2 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">
               Add to cart
             </button>
           </div>
@@ -630,19 +650,119 @@
           <hr class="my-6 md:my-8 border-gray-200 dark:border-gray-800" />
 
           <p class="mb-6 text-gray-500 dark:text-gray-400">
-            <b>CÔNGG DỤNG</b>
-            Bổ sung canxi, vitamin D3, hỗ trợ xương, răng chắc khoẻ.
-            Giảm nguy cơ còi xương, chậm mọc răng ở trẻ em, thiếu hụt canxi, loãng xương ở người lớn.
+            <b>CÔNG DỤNG</b>
+            Bổ sung canxi, vitamin D3, hỗ trợ xương, răng chắc khoẻ. Giảm nguy
+            cơ còi xương, chậm mọc răng ở trẻ em, thiếu hụt canxi, loãng xương
+            ở người lớn.
           </p>
           <p class="mb-6 text-gray-500 dark:text-gray-400">
             <b>ĐỐI TƯỢNG SỬ DỤNG:</b>
-            Trẻ em trên 6 tuổi và người lớn:
-            - Trẻ em đang tuổi phát triển, trẻ em còi xương, chậm mọc răng.
-            - Người lớn muốn bổ sung canxi, người loãng xương.
+            Trẻ em trên 6 tuổi và người lớn: Trẻ em đang tuổi phát triển,
+            trẻ em còi xương, chậm mọc răng. Người lớn muốn bổ sung canxi,
+            người loãng xương.
           </p>
           <p class="mb-6 text-gray-500 dark:text-gray-400">
-            Quy cách đóng gói: Hộp 6 vỉ x 10 viên nang mềm. <br>
-            Tiêu chuẩn: TCCS | <a href="./images/GDK_POWERSURE_CANXI_D3.jpg">Số ĐKSP: 8919/2019/ĐKSP</a> <br>
+            Quy cách đóng gói: Hộp 6 vỉ x 10 viên nang mềm. <br />
+            Tiêu chuẩn: TCCS |
+            <a href="./images/GDK_POWERSURE_CANXI_D3.jpg">Số ĐKSP: 8919/2019/ĐKSP</a>
+            <br />
+          </p>
+        </div>
+      </div>
+    </div>
+    <!--Sản phẩm 2-->
+    <div class="max-w-screen-xl px-4 mx-auto 2xl:px-0 product">
+      <div class="lg:grid lg:grid-cols-2 lg:gap-8 xl:gap-16">
+        <div class="shrink-0 max-w-md lg:max-w-lg mx-auto">
+          <img class="w-full dark:hidden" src="./images/Growsure_Plus_Extra.png" alt="SIRO Growsure_Plus_Extra" />"
+        </div>
+
+        <div class="mt-6 sm:mt-8 lg:mt-0">
+          <h4 class="text-gray-900 dark:text-white">
+            Thực phẩm bảo vệ sức khỏe
+          </h4>
+          <h1 class="text-xl font-semibold text-gray-900 sm:text-5xl dark:text-white">
+            GROWSURE PLUS EXTRA
+          </h1>
+          <div class="mt-4 sm:items-center sm:gap-4 sm:flex">
+            <p class="text-2xl font-extrabold text-gray-900 sm:text-3xl dark:text-white">
+              125.000 VNĐ
+            </p>
+
+            <div class="flex items-center gap-2 mt-2 sm:mt-0">
+              <div class="flex items-center gap-1">
+                <svg class="w-4 h-4 text-yellow-300" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24"
+                  height="24" fill="currentColor" viewBox="0 0 24 24">
+                  <path
+                    d="M13.849 4.22c-.684-1.626-3.014-1.626-3.698 0L8.397 8.387l-4.552.361c-1.775.14-2.495 2.331-1.142 3.477l3.468 2.937-1.06 4.392c-.413 1.713 1.472 3.067 2.992 2.149L12 19.35l3.897 2.354c1.52.918 3.405-.436 2.992-2.15l-1.06-4.39 3.468-2.938c1.353-1.146.633-3.336-1.142-3.477l-4.552-.36-1.754-4.17Z" />
+                </svg>
+                <svg class="w-4 h-4 text-yellow-300" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24"
+                  height="24" fill="currentColor" viewBox="0 0 24 24">
+                  <path
+                    d="M13.849 4.22c-.684-1.626-3.014-1.626-3.698 0L8.397 8.387l-4.552.361c-1.775.14-2.495 2.331-1.142 3.477l3.468 2.937-1.06 4.392c-.413 1.713 1.472 3.067 2.992 2.149L12 19.35l3.897 2.354c1.52.918 3.405-.436 2.992-2.15l-1.06-4.39 3.468-2.938c1.353-1.146.633-3.336-1.142-3.477l-4.552-.36-1.754-4.17Z" />
+                </svg>
+                <svg class="w-4 h-4 text-yellow-300" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24"
+                  height="24" fill="currentColor" viewBox="0 0 24 24">
+                  <path
+                    d="M13.849 4.22c-.684-1.626-3.014-1.626-3.698 0L8.397 8.387l-4.552.361c-1.775.14-2.495 2.331-1.142 3.477l3.468 2.937-1.06 4.392c-.413 1.713 1.472 3.067 2.992 2.149L12 19.35l3.897 2.354c1.52.918 3.405-.436 2.992-2.15l-1.06-4.39 3.468-2.938c1.353-1.146.633-3.336-1.142-3.477l-4.552-.36-1.754-4.17Z" />
+                </svg>
+                <svg class="w-4 h-4 text-yellow-300" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24"
+                  height="24" fill="currentColor" viewBox="0 0 24 24">
+                  <path
+                    d="M13.849 4.22c-.684-1.626-3.014-1.626-3.698 0L8.397 8.387l-4.552.361c-1.775.14-2.495 2.331-1.142 3.477l3.468 2.937-1.06 4.392c-.413 1.713 1.472 3.067 2.992 2.149L12 19.35l3.897 2.354c1.52.918 3.405-.436 2.992-2.15l-1.06-4.39 3.468-2.938c1.353-1.146.633-3.336-1.142-3.477l-4.552-.36-1.754-4.17Z" />
+                </svg>
+                <svg class="w-4 h-4 text-yellow-300" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24"
+                  height="24" fill="currentColor" viewBox="0 0 24 24">
+                  <path
+                    d="M13.849 4.22c-.684-1.626-3.014-1.626-3.698 0L8.397 8.387l-4.552.361c-1.775.14-2.495 2.331-1.142 3.477l3.468 2.937-1.06 4.392c-.413 1.713 1.472 3.067 2.992 2.149L12 19.35l3.897 2.354c1.52.918 3.405-.436 2.992-2.15l-1.06-4.39 3.468-2.938c1.353-1.146.633-3.336-1.142-3.477l-4.552-.36-1.754-4.17Z" />
+                </svg>
+              </div>
+              <p class="text-sm font-medium leading-none text-gray-500 dark:text-gray-400">
+                (5.0)
+              </p>
+              <a href="#"
+                class="text-sm font-medium leading-none text-gray-900 underline hover:no-underline dark:text-white">
+                63,345 Reviews
+              </a>
+            </div>
+          </div>
+
+          <div class="mt-6 sm:gap-4 sm:items-center sm:flex sm:mt-8 add-container">
+            <a href="#" title=""
+              class="flex items-center justify-center py-2.5 px-5 text-sm font-medium text-gray-900 focus:outline-none bg-white rounded-lg border border-gray-200 hover:bg-gray-100 hover:text-primary-700 focus:z-10 focus:ring-4 focus:ring-gray-100 dark:focus:ring-gray-700 dark:bg-gray-800 dark:text-gray-400 dark:border-gray-600 dark:hover:text-white dark:hover:bg-gray-700"
+              role="button">
+              <svg class="w-5 h-5 -ms-2 me-2" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24"
+                height="24" fill="none" viewBox="0 0 24 24">
+                <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                  d="M12.01 6.001C6.5 1 1 8 5.782 13.001L12.011 20l6.23-7C23 8 17.5 1 12.01 6.002Z" />
+              </svg>
+              Add to favorites
+            </a>
+            <button type="button"
+              class="add-to-card flex items-center justify-center text-white bg-blue-700 hover:bg-blue-800 focus:outline-none focus:ring-4 focus:ring-blue-300 font-medium rounded-full text-sm px-5 py-2.5 text-center me-2 mb-2 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">
+              Add to cart
+            </button>
+          </div>
+
+          <hr class="my-6 md:my-8 border-gray-200 dark:border-gray-800" />
+
+          <p class="mb-6 text-gray-500 dark:text-gray-400">
+            <b>CÔNG DỤNG</b>
+            Hỗ trợ ăn ngủ ngon, giảm mệt mỏi do kém ăn, thiếu ngủ.
+            Giúp tăng trưởng và phát triển trí não nhờ bổ sung cao men bia, Taurin, DHA, Thymo, L-Lysin, Hồng Sâm... Với
+            nguyên liệu nhập khẩu.
+            Bổ sung hàm lượng Calcium Glucoheptonat nhập khẩu Pháp & vitamin D3 với tỷ lệ hợp lý, giúp trẻ phát triển
+            chiều cao, xương chắc khoẻ.
+          </p>
+          <p class="mb-6 text-gray-500 dark:text-gray-400">
+            <b>ĐỐI TƯỢNG SỬ DỤNG:</b>
+            Trẻ em và người lớn chán ăn, ăn không ngon, người mệt mỏi do thiếu ngủ.
+          </p>
+          <p class="mb-6 text-gray-500 dark:text-gray-400">
+            Thể tích thực: 125ml/chai ± 7,5%.<br />
+            Tiêu chuẩn: TCCS |
+            <a href="./images/GDK_Growsure_Plus_Extra.jpg">Số ĐKSP: 9395/2021/ĐKSP</a>
+            <br />
           </p>
         </div>
       </div>
@@ -715,8 +835,9 @@
         </ul>
       </div>
       <hr class="my-6 border-gray-200 sm:mx-auto dark:border-gray-700 lg:my-8" />
-      <span class="block text-sm text-gray-500 sm:text-center dark:text-gray-400">© 2023 <a href="https://flowbite.com/"
-          class="hover:underline">Flowbite™</a>. All Rights Reserved.</span>
+      <span class="block text-sm text-gray-500 sm:text-center dark:text-gray-400">© 2023
+        <a href="https://flowbite.com/" class="hover:underline">Flowbite™</a>.
+        All Rights Reserved.</span>
     </div>
   </footer>
   <!-- jQuery if you need it (or not)
