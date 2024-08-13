@@ -44,12 +44,7 @@
       <div class="pl-4 flex items-center">
         <a class="toggleColour text-white no-underline hover:no-underline font-bold text-2xl lg:text-4xl" href="#">
           <!--Icon from: http://www.potlabicons.com/ -->
-          <svg class="h-8 fill-current inline" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512.005 512.005">
-            <rect fill="#2a2a31" x="16.539" y="425.626" width="479.767" height="50.502"
-              transform="matrix(1,0,0,1,0,0)" />
-            <path class="plane-take-off"
-              d=" M 510.7 189.151 C 505.271 168.95 484.565 156.956 464.365 162.385 L 330.156 198.367 L 155.924 35.878 L 107.19 49.008 L 211.729 230.183 L 86.232 263.767 L 36.614 224.754 L 0 234.603 L 45.957 314.27 L 65.274 347.727 L 105.802 336.869 L 240.011 300.886 L 349.726 271.469 L 483.935 235.486 C 504.134 230.057 516.129 209.352 510.7 189.151 Z " />
-          </svg>
+          <img class="h-12 fill-current inline mb-2" viewBox="0 0 512.005 512.005" src="./images/logo_HaB_02.png" />
           HaB
         </a>
       </div>
@@ -71,23 +66,23 @@
           </li>
           <li class="mr-3">
             <a class="inline-block text-black no-underline hover:text-gray-800 hover:text-underline py-2 px-4"
-              href="#sp1">Sản phẩm</a>
+              href="#productList">Sản phẩm</a>
           </li>
-          <li class="mr-3">
+          <!-- <li class="mr-3">
             <a class="inline-block text-black no-underline hover:text-gray-800 hover:text-underline py-2 px-4"
               href="#pricingTitle">Ưu đãi</a>
-          </li>
-          <li class="mr-3">
+          </li> -->
+          <!-- <li class="mr-3">
             <a class="inline-block text-black no-underline hover:text-gray-800 hover:text-underline py-2 px-4"
               href="#">Đối tác</a>
+          </li> -->
+          <li class="mr-3">
+            <a class="inline-block text-black no-underline hover:text-gray-800 hover:text-underline py-2 px-4"
+              href="#contact">Hợp tác</a>
           </li>
           <li class="mr-3">
             <a class="inline-block text-black no-underline hover:text-gray-800 hover:text-underline py-2 px-4"
-              href="#">Hợp tác</a>
-          </li>
-          <li class="mr-3">
-            <a class="inline-block text-black no-underline hover:text-gray-800 hover:text-underline py-2 px-4"
-              href="#">HaB & Thông điệp</a>
+              href="#infoHaB">HaB & Thông điệp</a>
           </li>
         </ul>
         <button onclick="openLink()" id="navAction"
@@ -142,7 +137,7 @@
     </svg>
   </div>
   <!--HaB & Thông điệp-->
-  <section class="bg-white border-b py-8">
+  <section class="bg-white border-b py-8" id="infoHaB">
     <div class="container max-w-5xl mx-auto m-8">
       <h2 class="w-full my-2 text-5xl font-bold leading-tight text-center text-gray-800">
         GIỚI THIỆU VỀ HaB
@@ -570,7 +565,7 @@
               </svg>
               Add to favorites
             </a>
-            <button type="button"
+            <button onclick="openOrderForm()" type="button"
               class="add-to-card flex items-center justify-center text-white bg-blue-700 hover:bg-blue-800 focus:outline-none focus:ring-4 focus:ring-blue-300 font-medium rounded-full text-sm px-5 py-2.5 text-center me-2 mb-2 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">
               Đặt hàng ngay
             </button>
@@ -667,7 +662,7 @@
               </svg>
               Add to favorites
             </a>
-            <button type="button"
+            <button onclick="openOrderForm()" type=" button"
               class="add-to-card flex items-center justify-center text-white bg-blue-700 hover:bg-blue-800 focus:outline-none focus:ring-4 focus:ring-blue-300 font-medium rounded-full text-sm px-5 py-2.5 text-center me-2 mb-2 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">
               Đặt hàng ngay
             </button>
@@ -729,7 +724,7 @@
     <div class="py-8 px-4 mx-auto max-w-screen-xl lg:py-16 lg:px-6">
       <div class="mx-auto max-w-screen-md sm:text-center">
         <h2 class="w-full my-2 text-5xl font-bold leading-tight text-center text-white">
-          Hợp tác kinh doanh
+          HỢP TÁC KINH DOANH
         </h2>
         <div class="w-full mb-4">
           <div class="h-1 mx-auto bg-white w-1/6 opacity-25 my-0 py-0 rounded-t"></div>
@@ -742,13 +737,6 @@
             <div class="relative w-full">
               <label for="email" class="hidden mb-2 text-sm font-medium text-gray-900 dark:text-gray-300">Số điện
                 thoại</label>
-              <div class="flex absolute inset-y-0 left-0 items-center pl-3 pointer-events-none">
-                <svg class="w-5 h-5 text-gray-500 dark:text-gray-400" fill="currentColor" viewBox="0 0 20 20"
-                  xmlns="http://www.w3.org/2000/svg">
-                  <path d="M2.003 5.884L10 9.882l7.997-3.998A2 2 0 0016 4H4a2 2 0 00-1.997 1.884z"></path>
-                  <path d="M18 8.118l-8 4-8-4V14a2 2 0 002 2h12a2 2 0 002-2V8.118z"></path>
-                </svg>
-              </div>
               <input
                 class="block p-3 pl-10 w-full text-sm text-gray-900 bg-gray-50 rounded-lg border border-gray-300 sm:rounded-none sm:rounded-l-lg focus:ring-primary-500 focus:border-primary-500 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-primary-500 dark:focus:border-primary-500"
                 placeholder="Nhập số điện thoại" type="number" id="phoneNumber" required="">
@@ -756,12 +744,12 @@
             <div>
               <button type="submit"
                 class="py-3 px-5 w-full text-sm font-medium text-center text-white rounded-lg border cursor-pointer bg-primary-700 border-primary-600 sm:rounded-none sm:rounded-r-lg hover:bg-primary-800 focus:ring-4 focus:ring-primary-300 dark:bg-primary-600 dark:hover:bg-primary-700 dark:focus:ring-primary-800">
-                Đăng ký
+                Gửi
               </button>
             </div>
           </div>
           <div
-            class="mx-auto max-w-screen-sm text-sm text-left text-gray-500 newsletter-form-footer dark:text-gray-500">
+            class="mx-auto max-w-screen-sm text-sm text-left text-white-900 newsletter-form-footer dark:text-gray-500">
             We care about the protection of your data. <a href="#"
               class="font-medium text-primary-600 dark:text-primary-500 hover:underline">Read our Privacy Policy</a>.
           </div>
