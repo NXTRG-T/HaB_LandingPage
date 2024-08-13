@@ -1,151 +1,211 @@
 <!DOCTYPE html>
 <html lang="vi">
-
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-  <title>HaB .,JSC</title>
-  <meta name="description" content="HaB .,JSC" />
-  <meta name="keywords" content="#" />
-  <meta name="author" content="#" />
-  <link rel="stylesheet" href="https://unpkg.com/tailwindcss@2.2.19/dist/tailwind.min.css" />
-  <!--Replace with your tailwind.css once created-->
-  <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:400,700" rel="stylesheet" />
-  <!-- Define your gradient here - use online tools to find a gradient matching your branding-->
-  <style>
-    .gradient {
-      background: linear-gradient(90deg, #035003 25%, #107907 100%);
-    }
-
-    .product {
-      border-bottom: 1px solid #ccc;
-      padding-bottom: 1rem;
-      padding-top: 1rem;
-    }
-
-    @media (max-width: 639px) {
-      .add-container {
-        display: flex;
-        flex-direction: column;
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>HaB .,JSC</title>
+    <meta name="description" content="HaB .,JSC" />
+    <meta name="keywords" content="#" />
+    <meta name="author" content="#" />
+    <link
+      rel="stylesheet"
+      href="https://unpkg.com/tailwindcss@2.2.19/dist/tailwind.min.css"
+    />
+    <!--Replace with your tailwind.css once created-->
+    <link
+      href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:400,700"
+      rel="stylesheet"
+    />
+    <!-- Define your gradient here - use online tools to find a gradient matching your branding-->
+    <style>
+      .gradient {
+        background: linear-gradient(90deg, #035003 25%, #107907 100%);
       }
 
-      .add-to-card {
-        margin-top: 1rem;
+      .product {
+        border-bottom: 1px solid #ccc;
+        padding-bottom: 1rem;
+        padding-top: 1rem;
       }
-    }
-  </style>
-</head>
 
-<body class="leading-normal tracking-normal text-white gradient" style="font-family: 'Source Sans Pro', sans-serif">
-  <!--Nav-->
-  <nav id="header" class="fixed w-full z-30 top-0 text-white">
-    <div class="w-full container mx-auto flex flex-wrap items-center justify-between mt-0 py-2">
-      <div class="pl-4 flex items-center">
-        <a class="toggleColour text-white no-underline hover:no-underline font-bold text-2xl lg:text-4xl" href="#">
-          <!--Icon from: http://www.potlabicons.com/ -->
-          <img class="h-12 fill-current inline mb-2" viewBox="0 0 512.005 512.005" src="./images/logo_HaB_02.png" />
-          HaB
-        </a>
-      </div>
-      <div class="block lg:hidden pr-4">
-        <button id="nav-toggle"
-          class="flex items-center p-1 text-pink-800 hover:text-gray-900 focus:outline-none focus:shadow-outline transform transition hover:scale-105 duration-300 ease-in-out">
-          <svg class="fill-current h-6 w-6" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
-            <title>Menu</title>
-            <path d="M0 3h20v2H0V3zm0 6h20v2H0V9zm0 6h20v2H0v-2z" />
-          </svg>
-        </button>
-      </div>
+      @media (max-width: 639px) {
+        .add-container {
+          display: flex;
+          flex-direction: column;
+        }
+
+        .add-to-card {
+          margin-top: 1rem;
+        }
+      }
+    </style>
+  </head>
+
+  <body
+    class="leading-normal tracking-normal text-white gradient"
+    style="font-family: 'Source Sans Pro', sans-serif"
+  >
+    <!--Nav-->
+    <nav id="header" class="fixed w-full z-30 top-0 text-white">
       <div
-        class="w-full flex-grow lg:flex lg:items-center lg:w-auto hidden mt-2 lg:mt-0 bg-white lg:bg-transparent text-black p-4 lg:p-0 z-20"
-        id="nav-content">
-        <ul class="list-reset lg:flex justify-end flex-1 items-center">
-          <li class="mr-3">
-            <a class="inline-block py-2 px-4 text-black font-bold no-underline" href="#">Trang chủ</a>
-          </li>
-          <li class="mr-3">
-            <a class="inline-block text-black no-underline hover:text-gray-800 hover:text-underline py-2 px-4"
-              href="#productList">Sản phẩm</a>
-          </li>
-          <!-- <li class="mr-3">
-            <a class="inline-block text-black no-underline hover:text-gray-800 hover:text-underline py-2 px-4"
-              href="#pricingTitle">Ưu đãi</a>
-          </li> -->
-          <!-- <li class="mr-3">
-            <a class="inline-block text-black no-underline hover:text-gray-800 hover:text-underline py-2 px-4"
-              href="#">Đối tác</a>
-          </li> -->
-          <li class="mr-3">
-            <a class="inline-block text-black no-underline hover:text-gray-800 hover:text-underline py-2 px-4"
-              href="#contact">Hợp tác</a>
-          </li>
-          <li class="mr-3">
-            <a class="inline-block text-black no-underline hover:text-gray-800 hover:text-underline py-2 px-4"
-              href="#infoHaB">HaB & Thông điệp</a>
-          </li>
-        </ul>
-        <button onclick="openLink()" id="navAction"
-          class="mx-auto lg:mx-0 hover:underline bg-white text-gray-800 font-bold rounded-full mt-4 lg:mt-0 py-4 px-8 shadow opacity-75 focus:outline-none focus:shadow-outline transform transition hover:scale-105 duration-300 ease-in-out">
-          Liên hệ
-        </button>
+        class="w-full container mx-auto flex flex-wrap items-center justify-between mt-0 py-2"
+      >
+        <div class="pl-4 flex items-center">
+          <a
+            class="toggleColour text-white no-underline hover:no-underline font-bold text-2xl lg:text-4xl"
+            href="#"
+          >
+            <!--Icon from: http://www.potlabicons.com/ -->
+            <img
+              class="h-12 fill-current inline mb-2"
+              viewBox="0 0 512.005 512.005"
+              src="./images/logo_HaB_02.png"
+            />
+            HaB
+          </a>
+        </div>
+        <div class="block lg:hidden pr-4">
+          <button
+            id="nav-toggle"
+            class="flex items-center p-1 text-pink-800 hover:text-gray-900 focus:outline-none focus:shadow-outline transform transition hover:scale-105 duration-300 ease-in-out"
+          >
+            <svg
+              class="fill-current h-6 w-6"
+              viewBox="0 0 20 20"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <title>Menu</title>
+              <path d="M0 3h20v2H0V3zm0 6h20v2H0V9zm0 6h20v2H0v-2z" />
+            </svg>
+          </button>
+        </div>
+        <div
+          class="w-full flex-grow lg:flex lg:items-center lg:w-auto hidden mt-2 lg:mt-0 bg-white lg:bg-transparent text-black p-4 lg:p-0 z-20"
+          id="nav-content"
+        >
+          <ul class="list-reset lg:flex justify-end flex-1 items-center">
+            <li class="mr-3">
+              <a
+                class="inline-block py-2 px-4 text-white font-bold no-underline"
+                href="#"
+                id="nav-text"
+                >Trang chủ</a
+              >
+            </li>
+            <li class="mr-3">
+              <a
+                class="inline-block text-white no-underline hover:text-gray-800 hover:text-underline py-2 px-4"
+                href="#productList"
+                id="nav-text"
+                >Sản phẩm</a
+              >
+            </li>
+            <li class="mr-3">
+              <a
+                class="inline-block text-white no-underline hover:text-gray-800 hover:text-underline py-2 px-4"
+                href="#contact"
+                id="nav-text"
+                >Hợp tác</a
+              >
+            </li>
+            <li class="mr-3">
+              <a
+                class="inline-block text-white no-underline hover:text-gray-800 hover:text-underline py-2 px-4"
+                href="#infoHaB"
+                id="nav-text"
+                >HaB & Thông điệp</a
+              >
+            </li>
+          </ul>
+          <button
+            onclick="openLink()"
+            id="navAction"
+            class="mx-auto lg:mx-0 hover:underline bg-white text-gray-800 font-bold rounded-full mt-4 lg:mt-0 py-4 px-8 shadow opacity-75 focus:outline-none focus:shadow-outline transform transition hover:scale-105 duration-300 ease-in-out"
+          >
+            Liên hệ
+          </button>
+        </div>
+      </div>
+      <hr class="border-b border-gray-100 opacity-25 my-0 py-0" />
+    </nav>
+    <!--Banner-->
+    <div class="pt-24">
+      <div
+        class="container px-3 mx-auto flex flex-wrap flex-col md:flex-row items-center"
+      >
+        <!--Left Col-->
+        <div
+          class="flex flex-col w-full md:w-2/5 justify-center items-start text-center md:text-left"
+        >
+          <p class="tracking-loose w-full">Bạn có biết? Với HaB</p>
+          <h1 class="my-4 text-5xl font-bold leading-tight">
+            SỨC KHỎE & SẮC ĐẸP
+          </h1>
+          <p class="leading-normal text-2xl mb-8">
+            Được bắt đầu & duy trì từ những <b>THÓI QUEN TỐT</b>
+          </p>
+        </div>
+        <!--Right Col-->
+        <div class="w-full md:w-3/5 py-6 text-center">
+          <img class="w-full md:w-4/5 z-50" src="./images/Banner.png" />
+        </div>
       </div>
     </div>
-    <hr class="border-b border-gray-100 opacity-25 my-0 py-0" />
-  </nav>
-  <!--Banner-->
-  <div class="pt-24">
-    <div class="container px-3 mx-auto flex flex-wrap flex-col md:flex-row items-center">
-      <!--Left Col-->
-      <div class="flex flex-col w-full md:w-2/5 justify-center items-start text-center md:text-left">
-        <p class="tracking-loose w-full">Bạn có biết? Với HaB</p>
-        <h1 class="my-4 text-5xl font-bold leading-tight">
-          SỨC KHỎE & SẮC ĐẸP
-        </h1>
-        <p class="leading-normal text-2xl mb-8">
-          Được bắt đầu & duy trì từ những <b>THÓI QUEN TỐT</b>
-        </p>
-      </div>
-      <!--Right Col-->
-      <div class="w-full md:w-3/5 py-6 text-center">
-        <img class="w-full md:w-4/5 z-50" src="./images/Banner.png" />
-      </div>
+    <!--Gradient-->
+    <div class="relative -mt-12 lg:-mt-24">
+      <svg
+        viewBox="0 0 1428 174"
+        version="1.1"
+        xmlns="http://www.w3.org/2000/svg"
+        xmlns:xlink="http://www.w3.org/1999/xlink"
+      >
+        <g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+          <g
+            transform="translate(-2.000000, 44.000000)"
+            fill="#FFFFFF"
+            fill-rule="nonzero"
+          >
+            <path
+              d="M0,0 C90.7283404,0.927527913 147.912752,27.187927 291.910178,59.9119003 C387.908462,81.7278826 543.605069,89.334785 759,82.7326078 C469.336065,156.254352 216.336065,153.6679 0,74.9732496"
+              opacity="0.100000001"
+            ></path>
+            <path
+              d="M100,104.708498 C277.413333,72.2345949 426.147877,52.5246657 546.203633,45.5787101 C666.259389,38.6327546 810.524845,41.7979068 979,55.0741668 C931.069965,56.122511 810.303266,74.8455141 616.699903,111.243176 C423.096539,147.640838 250.863238,145.462612 100,104.708498 Z"
+              opacity="0.100000001"
+            ></path>
+            <path
+              d="M1046,51.6521276 C1130.83045,29.328812 1279.08318,17.607883 1439,40.1656806 L1439,120 C1271.17211,77.9435312 1140.17211,55.1609071 1046,51.6521276 Z"
+              id="Path-4"
+              opacity="0.200000003"
+            ></path>
+          </g>
+          <g
+            transform="translate(-4.000000, 76.000000)"
+            fill="#FFFFFF"
+            fill-rule="nonzero"
+          >
+            <path
+              d="M0.457,34.035 C57.086,53.198 98.208,65.809 123.822,71.865 C181.454,85.495 234.295,90.29 272.033,93.459 C311.355,96.759 396.635,95.801 461.025,91.663 C486.76,90.01 518.727,86.372 556.926,80.752 C595.747,74.596 622.372,70.008 636.799,66.991 C663.913,61.324 712.501,49.503 727.605,46.128 C780.47,34.317 818.839,22.532 856.324,15.904 C922.689,4.169 955.676,2.522 1011.185,0.432 C1060.705,1.477 1097.39,3.129 1121.236,5.387 C1161.703,9.219 1208.621,17.821 1235.4,22.304 C1285.855,30.748 1354.351,47.432 1440.886,72.354 L1441.191,104.352 L1.121,104.031 L0.457,34.035 Z"
+            ></path>
+          </g>
+        </g>
+      </svg>
     </div>
-  </div>
-  <!--Gradient-->
-  <div class="relative -mt-12 lg:-mt-24">
-    <svg viewBox="0 0 1428 174" version="1.1" xmlns="http://www.w3.org/2000/svg"
-      xmlns:xlink="http://www.w3.org/1999/xlink">
-      <g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
-        <g transform="translate(-2.000000, 44.000000)" fill="#FFFFFF" fill-rule="nonzero">
-          <path
-            d="M0,0 C90.7283404,0.927527913 147.912752,27.187927 291.910178,59.9119003 C387.908462,81.7278826 543.605069,89.334785 759,82.7326078 C469.336065,156.254352 216.336065,153.6679 0,74.9732496"
-            opacity="0.100000001"></path>
-          <path
-            d="M100,104.708498 C277.413333,72.2345949 426.147877,52.5246657 546.203633,45.5787101 C666.259389,38.6327546 810.524845,41.7979068 979,55.0741668 C931.069965,56.122511 810.303266,74.8455141 616.699903,111.243176 C423.096539,147.640838 250.863238,145.462612 100,104.708498 Z"
-            opacity="0.100000001"></path>
-          <path
-            d="M1046,51.6521276 C1130.83045,29.328812 1279.08318,17.607883 1439,40.1656806 L1439,120 C1271.17211,77.9435312 1140.17211,55.1609071 1046,51.6521276 Z"
-            id="Path-4" opacity="0.200000003"></path>
-        </g>
-        <g transform="translate(-4.000000, 76.000000)" fill="#FFFFFF" fill-rule="nonzero">
-          <path
-            d="M0.457,34.035 C57.086,53.198 98.208,65.809 123.822,71.865 C181.454,85.495 234.295,90.29 272.033,93.459 C311.355,96.759 396.635,95.801 461.025,91.663 C486.76,90.01 518.727,86.372 556.926,80.752 C595.747,74.596 622.372,70.008 636.799,66.991 C663.913,61.324 712.501,49.503 727.605,46.128 C780.47,34.317 818.839,22.532 856.324,15.904 C922.689,4.169 955.676,2.522 1011.185,0.432 C1060.705,1.477 1097.39,3.129 1121.236,5.387 C1161.703,9.219 1208.621,17.821 1235.4,22.304 C1285.855,30.748 1354.351,47.432 1440.886,72.354 L1441.191,104.352 L1.121,104.031 L0.457,34.035 Z">
-          </path>
-        </g>
-      </g>
-    </svg>
-  </div>
-  <!--HaB & Thông điệp-->
-  <section class="bg-white border-b py-8" id="infoHaB">
-    <div class="container max-w-5xl mx-auto m-8">
-      <h2 class="w-full my-2 text-5xl font-bold leading-tight text-center text-gray-800">
-        GIỚI THIỆU VỀ HaB
-      </h2>
-      <div class="w-full mb-4">
-        <div class="h-1 mx-auto gradient w-64 opacity-25 my-0 py-0 rounded-t"></div>
-      </div>
-      <!-- <div class="flex flex-wrap">
+    <!--HaB & Thông điệp-->
+    <section class="bg-white border-b py-8" id="infoHaB">
+      <div class="container max-w-5xl mx-auto m-8">
+        <h2
+          class="w-full my-2 text-5xl font-bold leading-tight text-center text-gray-800"
+        >
+          GIỚI THIỆU VỀ HaB
+        </h2>
+        <div class="w-full mb-4">
+          <div
+            class="h-1 mx-auto gradient w-64 opacity-25 my-0 py-0 rounded-t"
+          ></div>
+        </div>
+        <!-- <div class="flex flex-wrap">
         <div class="w-5/6 sm:w-1/2 p-6">
           <h3 class="text-3xl text-gray-800 font-bold leading-none mb-3">
             Lorem ipsum dolor sit amet
@@ -281,40 +341,41 @@
           </svg>
         </div>
       </div> -->
-      <div class="flex flex-wrap flex-col-reverse sm:flex-row">
-        <div class="w-full sm:w-1/3 p-6 mt-6">
-          <img class="w-full md:w-4/5 z-50" src="./images/Logo_HaB_01.png" />
-        </div>
-        <div class="w-full sm:w-2/3 p-6 mt-6">
-          <div class="align-middle">
-            <h3 class="text-3xl text-gray-800 font-bold leading-none mb-3">
-              CÔNG TY CỔ PHẦN TẬP ĐOÀN HAB VIỆT NAM
-            </h3>
-            <h4 class="text-gray-800 leading-none mb-3">
-              <i>HaB VIET NAM GROUP JOINT STOCK COMPANY</i>
-            </h4>
-            <p class="text-gray-600 mb-2">
-              <b>✅ Mã số doanh nghiệp: 0110716974</b>
-            </p>
-            <p class="text-gray-600 mb-2">
-              <b>🏢 Địa chỉ trụ sở chính: </b>
-              Tầng 8, Sky City Tower A, Số 88 Láng Hạ, Phường Láng Hạ, Quận Đống Đa, Thành phố Hà Nội, Việt Nam
-            </p>
-            <p class="text-gray-600 mb-2">
-              <b>📞 Điện thoại: </b>
-              0567 666 899
-            </p>
-            <p class="text-gray-600 mb-2">
-              <b>📧 Email: </b>
-              admin@hab-jsc.com
-            </p>
+        <div class="flex flex-wrap flex-col-reverse sm:flex-row">
+          <div class="w-full sm:w-1/3 p-6 mt-6">
+            <img class="w-full md:w-4/5 z-50" src="./images/Logo_HaB_01.png" />
+          </div>
+          <div class="w-full sm:w-2/3 p-6 mt-6">
+            <div class="align-middle">
+              <h3 class="text-3xl text-gray-800 font-bold leading-none mb-3">
+                CÔNG TY CỔ PHẦN TẬP ĐOÀN HAB VIỆT NAM
+              </h3>
+              <h4 class="text-gray-800 leading-none mb-3">
+                <i>HaB VIET NAM GROUP JOINT STOCK COMPANY</i>
+              </h4>
+              <p class="text-gray-600 mb-2">
+                <b>✅ Mã số doanh nghiệp: 0110716974</b>
+              </p>
+              <p class="text-gray-600 mb-2">
+                <b>🏢 Địa chỉ trụ sở chính: </b>
+                Tầng 8, Sky City Tower A, Số 88 Láng Hạ, Phường Láng Hạ, Quận
+                Đống Đa, Thành phố Hà Nội, Việt Nam
+              </p>
+              <p class="text-gray-600 mb-2">
+                <b>📞 Điện thoại: </b>
+                0567 666 899
+              </p>
+              <p class="text-gray-600 mb-2">
+                <b>📧 Email: </b>
+                admin@hab-jsc.com
+              </p>
+            </div>
           </div>
         </div>
       </div>
-    </div>
-  </section>
-  <!--Title khác-->
-  <!-- <section class="bg-white border-b py-8" id="sp1">
+    </section>
+    <!--Title khác-->
+    <!-- <section class="bg-white border-b py-8" id="sp1">
     <div class="container mx-auto flex flex-wrap pt-4 pb-12">
       <h2 class="w-full my-2 text-5xl font-bold leading-tight text-center text-gray-800">
         Title
@@ -396,8 +457,8 @@
       </div>
     </div>
   </section> -->
-  <!--Pricing-->
-  <!-- <section class="bg-gray-100 py-8" id="pricingTitle">
+    <!--Pricing-->
+    <!-- <section class="bg-gray-100 py-8" id="pricingTitle">
     <div class="container mx-auto px-2 pt-4 pb-12 text-gray-800">
       <h2 class="w-full my-2 text-5xl font-bold leading-tight text-center text-gray-800">
         Pricing
@@ -489,274 +550,474 @@
     </div>
   </section> -->
 
-  <!--Sản phẩm-->
-  <section class="py-8 bg-white md:py-16 dark:bg-gray-900 antialiased" id="productList">
-    <h2 class="w-full my-2 text-5xl font-bold leading-tight text-center text-gray-800">
-      SẢN PHẨM
-    </h2>
-    <div class="w-full mb-8">
-      <div class="h-1 mx-auto gradient w-64 opacity-25 my-0 py-0 rounded-t"></div>
-    </div>
-    <!--Sản phẩm 1-->
-    <div class="max-w-screen-xl px-4 mx-auto 2xl:px-0 product">
-      <div class="lg:grid lg:grid-cols-2 lg:gap-8 xl:gap-16">
-        <div class="shrink-0 max-w-md lg:max-w-lg mx-auto">
-          <img class="w-full dark:hidden" src="./images/POWERSURE_CANXI_D3.png" alt="" />"
-        </div>
+    <!--Sản phẩm-->
+    <section
+      class="py-8 bg-white md:py-16 dark:bg-gray-900 antialiased"
+      id="productList"
+    >
+      <h2
+        class="w-full my-2 text-5xl font-bold leading-tight text-center text-gray-800"
+      >
+        SẢN PHẨM
+      </h2>
+      <div class="w-full mb-8">
+        <div
+          class="h-1 mx-auto gradient w-64 opacity-25 my-0 py-0 rounded-t"
+        ></div>
+      </div>
+      <!--Sản phẩm 1-->
+      <div class="max-w-screen-xl px-4 mx-auto 2xl:px-0 product">
+        <div class="lg:grid lg:grid-cols-2 lg:gap-8 xl:gap-16">
+          <div class="shrink-0 max-w-md lg:max-w-lg mx-auto">
+            <img
+              class="w-full dark:hidden"
+              src="./images/POWERSURE_CANXI_D3.png"
+              alt=""
+            />"
+          </div>
 
-        <div class="mt-6 sm:mt-8 lg:mt-0">
-          <h4 class="text-gray-900 dark:text-white">
-            Thực phẩm bảo vệ sức khỏe
-          </h4>
-          <h1 class="text-xl font-semibold text-gray-900 sm:text-5xl dark:text-white">
-            POWERSURE CANXI D3
-          </h1>
-          <div class="mt-4 sm:items-center sm:gap-4 sm:flex">
-            <p class="text-2xl font-extrabold text-gray-900 sm:text-3xl dark:text-white">
-              225.000 VNĐ
-            </p>
-
-            <div class="flex items-center gap-2 mt-2 sm:mt-0">
-              <div class="flex items-center gap-1">
-                <svg class="w-4 h-4 text-yellow-300" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24"
-                  height="24" fill="currentColor" viewBox="0 0 24 24">
-                  <path
-                    d="M13.849 4.22c-.684-1.626-3.014-1.626-3.698 0L8.397 8.387l-4.552.361c-1.775.14-2.495 2.331-1.142 3.477l3.468 2.937-1.06 4.392c-.413 1.713 1.472 3.067 2.992 2.149L12 19.35l3.897 2.354c1.52.918 3.405-.436 2.992-2.15l-1.06-4.39 3.468-2.938c1.353-1.146.633-3.336-1.142-3.477l-4.552-.36-1.754-4.17Z" />
-                </svg>
-                <svg class="w-4 h-4 text-yellow-300" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24"
-                  height="24" fill="currentColor" viewBox="0 0 24 24">
-                  <path
-                    d="M13.849 4.22c-.684-1.626-3.014-1.626-3.698 0L8.397 8.387l-4.552.361c-1.775.14-2.495 2.331-1.142 3.477l3.468 2.937-1.06 4.392c-.413 1.713 1.472 3.067 2.992 2.149L12 19.35l3.897 2.354c1.52.918 3.405-.436 2.992-2.15l-1.06-4.39 3.468-2.938c1.353-1.146.633-3.336-1.142-3.477l-4.552-.36-1.754-4.17Z" />
-                </svg>
-                <svg class="w-4 h-4 text-yellow-300" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24"
-                  height="24" fill="currentColor" viewBox="0 0 24 24">
-                  <path
-                    d="M13.849 4.22c-.684-1.626-3.014-1.626-3.698 0L8.397 8.387l-4.552.361c-1.775.14-2.495 2.331-1.142 3.477l3.468 2.937-1.06 4.392c-.413 1.713 1.472 3.067 2.992 2.149L12 19.35l3.897 2.354c1.52.918 3.405-.436 2.992-2.15l-1.06-4.39 3.468-2.938c1.353-1.146.633-3.336-1.142-3.477l-4.552-.36-1.754-4.17Z" />
-                </svg>
-                <svg class="w-4 h-4 text-yellow-300" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24"
-                  height="24" fill="currentColor" viewBox="0 0 24 24">
-                  <path
-                    d="M13.849 4.22c-.684-1.626-3.014-1.626-3.698 0L8.397 8.387l-4.552.361c-1.775.14-2.495 2.331-1.142 3.477l3.468 2.937-1.06 4.392c-.413 1.713 1.472 3.067 2.992 2.149L12 19.35l3.897 2.354c1.52.918 3.405-.436 2.992-2.15l-1.06-4.39 3.468-2.938c1.353-1.146.633-3.336-1.142-3.477l-4.552-.36-1.754-4.17Z" />
-                </svg>
-                <svg class="w-4 h-4 text-yellow-300" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24"
-                  height="24" fill="currentColor" viewBox="0 0 24 24">
-                  <path
-                    d="M13.849 4.22c-.684-1.626-3.014-1.626-3.698 0L8.397 8.387l-4.552.361c-1.775.14-2.495 2.331-1.142 3.477l3.468 2.937-1.06 4.392c-.413 1.713 1.472 3.067 2.992 2.149L12 19.35l3.897 2.354c1.52.918 3.405-.436 2.992-2.15l-1.06-4.39 3.468-2.938c1.353-1.146.633-3.336-1.142-3.477l-4.552-.36-1.754-4.17Z" />
-                </svg>
-              </div>
-              <p class="text-sm font-medium leading-none text-gray-500 dark:text-gray-400">
-                (5.0)
+          <div class="mt-6 sm:mt-8 lg:mt-0">
+            <h4 class="text-gray-900 dark:text-white">
+              Thực phẩm bảo vệ sức khỏe
+            </h4>
+            <h1
+              class="text-xl font-semibold text-gray-900 sm:text-5xl dark:text-white"
+            >
+              POWERSURE CANXI D3
+            </h1>
+            <div class="mt-4 sm:items-center sm:gap-4 sm:flex">
+              <p
+                class="text-2xl font-extrabold text-gray-900 sm:text-3xl dark:text-white"
+              >
+                225.000 VNĐ
               </p>
-              <a href="#"
-                class="text-sm font-medium leading-none text-gray-900 underline hover:no-underline dark:text-white">
-                93,688 Reviews
-              </a>
+
+              <div class="flex items-center gap-2 mt-2 sm:mt-0">
+                <div class="flex items-center gap-1">
+                  <svg
+                    class="w-4 h-4 text-yellow-300"
+                    aria-hidden="true"
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="24"
+                    height="24"
+                    fill="currentColor"
+                    viewBox="0 0 24 24"
+                  >
+                    <path
+                      d="M13.849 4.22c-.684-1.626-3.014-1.626-3.698 0L8.397 8.387l-4.552.361c-1.775.14-2.495 2.331-1.142 3.477l3.468 2.937-1.06 4.392c-.413 1.713 1.472 3.067 2.992 2.149L12 19.35l3.897 2.354c1.52.918 3.405-.436 2.992-2.15l-1.06-4.39 3.468-2.938c1.353-1.146.633-3.336-1.142-3.477l-4.552-.36-1.754-4.17Z"
+                    />
+                  </svg>
+                  <svg
+                    class="w-4 h-4 text-yellow-300"
+                    aria-hidden="true"
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="24"
+                    height="24"
+                    fill="currentColor"
+                    viewBox="0 0 24 24"
+                  >
+                    <path
+                      d="M13.849 4.22c-.684-1.626-3.014-1.626-3.698 0L8.397 8.387l-4.552.361c-1.775.14-2.495 2.331-1.142 3.477l3.468 2.937-1.06 4.392c-.413 1.713 1.472 3.067 2.992 2.149L12 19.35l3.897 2.354c1.52.918 3.405-.436 2.992-2.15l-1.06-4.39 3.468-2.938c1.353-1.146.633-3.336-1.142-3.477l-4.552-.36-1.754-4.17Z"
+                    />
+                  </svg>
+                  <svg
+                    class="w-4 h-4 text-yellow-300"
+                    aria-hidden="true"
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="24"
+                    height="24"
+                    fill="currentColor"
+                    viewBox="0 0 24 24"
+                  >
+                    <path
+                      d="M13.849 4.22c-.684-1.626-3.014-1.626-3.698 0L8.397 8.387l-4.552.361c-1.775.14-2.495 2.331-1.142 3.477l3.468 2.937-1.06 4.392c-.413 1.713 1.472 3.067 2.992 2.149L12 19.35l3.897 2.354c1.52.918 3.405-.436 2.992-2.15l-1.06-4.39 3.468-2.938c1.353-1.146.633-3.336-1.142-3.477l-4.552-.36-1.754-4.17Z"
+                    />
+                  </svg>
+                  <svg
+                    class="w-4 h-4 text-yellow-300"
+                    aria-hidden="true"
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="24"
+                    height="24"
+                    fill="currentColor"
+                    viewBox="0 0 24 24"
+                  >
+                    <path
+                      d="M13.849 4.22c-.684-1.626-3.014-1.626-3.698 0L8.397 8.387l-4.552.361c-1.775.14-2.495 2.331-1.142 3.477l3.468 2.937-1.06 4.392c-.413 1.713 1.472 3.067 2.992 2.149L12 19.35l3.897 2.354c1.52.918 3.405-.436 2.992-2.15l-1.06-4.39 3.468-2.938c1.353-1.146.633-3.336-1.142-3.477l-4.552-.36-1.754-4.17Z"
+                    />
+                  </svg>
+                  <svg
+                    class="w-4 h-4 text-yellow-300"
+                    aria-hidden="true"
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="24"
+                    height="24"
+                    fill="currentColor"
+                    viewBox="0 0 24 24"
+                  >
+                    <path
+                      d="M13.849 4.22c-.684-1.626-3.014-1.626-3.698 0L8.397 8.387l-4.552.361c-1.775.14-2.495 2.331-1.142 3.477l3.468 2.937-1.06 4.392c-.413 1.713 1.472 3.067 2.992 2.149L12 19.35l3.897 2.354c1.52.918 3.405-.436 2.992-2.15l-1.06-4.39 3.468-2.938c1.353-1.146.633-3.336-1.142-3.477l-4.552-.36-1.754-4.17Z"
+                    />
+                  </svg>
+                </div>
+                <p
+                  class="text-sm font-medium leading-none text-gray-500 dark:text-gray-400"
+                >
+                  (5.0)
+                </p>
+                <a
+                  href="#"
+                  class="text-sm font-medium leading-none text-gray-900 underline hover:no-underline dark:text-white"
+                >
+                  93,688 Reviews
+                </a>
+              </div>
             </div>
+
+            <div
+              class="mt-6 sm:gap-4 sm:items-center sm:flex sm:mt-8 add-container"
+            >
+              <a
+                href="#"
+                title=""
+                class="flex items-center justify-center py-2.5 px-5 text-sm font-medium text-gray-900 focus:outline-none bg-white rounded-lg border border-gray-200 hover:bg-gray-100 hover:text-primary-700 focus:z-10 focus:ring-4 focus:ring-gray-100 dark:focus:ring-gray-700 dark:bg-gray-800 dark:text-gray-400 dark:border-gray-600 dark:hover:text-white dark:hover:bg-gray-700"
+                role="button"
+              >
+                <svg
+                  class="w-5 h-5 -ms-2 me-2"
+                  aria-hidden="true"
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="24"
+                  height="24"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                >
+                  <path
+                    stroke="currentColor"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="2"
+                    d="M12.01 6.001C6.5 1 1 8 5.782 13.001L12.011 20l6.23-7C23 8 17.5 1 12.01 6.002Z"
+                  />
+                </svg>
+                Add to favorites
+              </a>
+              <button
+                onclick="openOrderForm()"
+                type="button"
+                class="add-to-card flex items-center justify-center text-white bg-blue-700 hover:bg-blue-800 focus:outline-none focus:ring-4 focus:ring-blue-300 font-medium rounded-full text-sm px-5 py-2.5 text-center me-2 mb-2 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800"
+              >
+                Đặt hàng ngay
+              </button>
+            </div>
+
+            <hr class="my-6 md:my-8 border-gray-200 dark:border-gray-800" />
+
+            <p class="mb-6 text-gray-500 dark:text-gray-400">
+              <b>CÔNG DỤNG</b>
+              Bổ sung canxi, vitamin D3, hỗ trợ xương, răng chắc khoẻ. Giảm nguy
+              cơ còi xương, chậm mọc răng ở trẻ em, thiếu hụt canxi, loãng xương
+              ở người lớn.
+            </p>
+            <p class="mb-6 text-gray-500 dark:text-gray-400">
+              <b>ĐỐI TƯỢNG SỬ DỤNG:</b>
+              Trẻ em trên 6 tuổi và người lớn: Trẻ em đang tuổi phát triển, trẻ
+              em còi xương, chậm mọc răng. Người lớn muốn bổ sung canxi, người
+              loãng xương.
+            </p>
+            <p class="mb-6 text-gray-500 dark:text-gray-400">
+              Quy cách đóng gói: Hộp 6 vỉ x 10 viên nang mềm. <br />
+              Tiêu chuẩn: TCCS |
+              <a href="./images/GDK_POWERSURE_CANXI_D3.jpg"
+                >Số ĐKSP: 8919/2019/ĐKSP</a
+              >
+              <br />
+            </p>
           </div>
-
-          <div class="mt-6 sm:gap-4 sm:items-center sm:flex sm:mt-8 add-container">
-            <a href="#" title=""
-              class="flex items-center justify-center py-2.5 px-5 text-sm font-medium text-gray-900 focus:outline-none bg-white rounded-lg border border-gray-200 hover:bg-gray-100 hover:text-primary-700 focus:z-10 focus:ring-4 focus:ring-gray-100 dark:focus:ring-gray-700 dark:bg-gray-800 dark:text-gray-400 dark:border-gray-600 dark:hover:text-white dark:hover:bg-gray-700"
-              role="button">
-              <svg class="w-5 h-5 -ms-2 me-2" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24"
-                height="24" fill="none" viewBox="0 0 24 24">
-                <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                  d="M12.01 6.001C6.5 1 1 8 5.782 13.001L12.011 20l6.23-7C23 8 17.5 1 12.01 6.002Z" />
-              </svg>
-              Add to favorites
-            </a>
-            <button onclick="openOrderForm()" type="button"
-              class="add-to-card flex items-center justify-center text-white bg-blue-700 hover:bg-blue-800 focus:outline-none focus:ring-4 focus:ring-blue-300 font-medium rounded-full text-sm px-5 py-2.5 text-center me-2 mb-2 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">
-              Đặt hàng ngay
-            </button>
-          </div>
-
-          <hr class="my-6 md:my-8 border-gray-200 dark:border-gray-800" />
-
-          <p class="mb-6 text-gray-500 dark:text-gray-400">
-            <b>CÔNG DỤNG</b>
-            Bổ sung canxi, vitamin D3, hỗ trợ xương, răng chắc khoẻ. Giảm nguy
-            cơ còi xương, chậm mọc răng ở trẻ em, thiếu hụt canxi, loãng xương
-            ở người lớn.
-          </p>
-          <p class="mb-6 text-gray-500 dark:text-gray-400">
-            <b>ĐỐI TƯỢNG SỬ DỤNG:</b>
-            Trẻ em trên 6 tuổi và người lớn: Trẻ em đang tuổi phát triển,
-            trẻ em còi xương, chậm mọc răng. Người lớn muốn bổ sung canxi,
-            người loãng xương.
-          </p>
-          <p class="mb-6 text-gray-500 dark:text-gray-400">
-            Quy cách đóng gói: Hộp 6 vỉ x 10 viên nang mềm. <br />
-            Tiêu chuẩn: TCCS |
-            <a href="./images/GDK_POWERSURE_CANXI_D3.jpg">Số ĐKSP: 8919/2019/ĐKSP</a>
-            <br />
-          </p>
         </div>
       </div>
-    </div>
-    <!--Sản phẩm 2-->
-    <div class="max-w-screen-xl px-4 mx-auto 2xl:px-0 product">
-      <div class="lg:grid lg:grid-cols-2 lg:gap-8 xl:gap-16">
-        <div class="shrink-0 max-w-md lg:max-w-lg mx-auto">
-          <img class="w-full dark:hidden" src="./images/Growsure_Plus_Extra.png" alt="SIRO Growsure_Plus_Extra" />"
-        </div>
+      <!--Sản phẩm 2-->
+      <div class="max-w-screen-xl px-4 mx-auto 2xl:px-0 product">
+        <div class="lg:grid lg:grid-cols-2 lg:gap-8 xl:gap-16">
+          <div class="shrink-0 max-w-md lg:max-w-lg mx-auto">
+            <img
+              class="w-full dark:hidden"
+              src="./images/Growsure_Plus_Extra.png"
+              alt="SIRO Growsure_Plus_Extra"
+            />"
+          </div>
 
-        <div class="mt-6 sm:mt-8 lg:mt-0">
-          <h4 class="text-gray-900 dark:text-white">
-            Thực phẩm bảo vệ sức khỏe
-          </h4>
-          <h1 class="text-xl font-semibold text-gray-900 sm:text-5xl dark:text-white">
-            GROWSURE PLUS EXTRA
-          </h1>
-          <div class="mt-4 sm:items-center sm:gap-4 sm:flex">
-            <p class="text-2xl font-extrabold text-gray-900 sm:text-3xl dark:text-white">
-              125.000 VNĐ
-            </p>
-
-            <div class="flex items-center gap-2 mt-2 sm:mt-0">
-              <div class="flex items-center gap-1">
-                <svg class="w-4 h-4 text-yellow-300" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24"
-                  height="24" fill="currentColor" viewBox="0 0 24 24">
-                  <path
-                    d="M13.849 4.22c-.684-1.626-3.014-1.626-3.698 0L8.397 8.387l-4.552.361c-1.775.14-2.495 2.331-1.142 3.477l3.468 2.937-1.06 4.392c-.413 1.713 1.472 3.067 2.992 2.149L12 19.35l3.897 2.354c1.52.918 3.405-.436 2.992-2.15l-1.06-4.39 3.468-2.938c1.353-1.146.633-3.336-1.142-3.477l-4.552-.36-1.754-4.17Z" />
-                </svg>
-                <svg class="w-4 h-4 text-yellow-300" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24"
-                  height="24" fill="currentColor" viewBox="0 0 24 24">
-                  <path
-                    d="M13.849 4.22c-.684-1.626-3.014-1.626-3.698 0L8.397 8.387l-4.552.361c-1.775.14-2.495 2.331-1.142 3.477l3.468 2.937-1.06 4.392c-.413 1.713 1.472 3.067 2.992 2.149L12 19.35l3.897 2.354c1.52.918 3.405-.436 2.992-2.15l-1.06-4.39 3.468-2.938c1.353-1.146.633-3.336-1.142-3.477l-4.552-.36-1.754-4.17Z" />
-                </svg>
-                <svg class="w-4 h-4 text-yellow-300" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24"
-                  height="24" fill="currentColor" viewBox="0 0 24 24">
-                  <path
-                    d="M13.849 4.22c-.684-1.626-3.014-1.626-3.698 0L8.397 8.387l-4.552.361c-1.775.14-2.495 2.331-1.142 3.477l3.468 2.937-1.06 4.392c-.413 1.713 1.472 3.067 2.992 2.149L12 19.35l3.897 2.354c1.52.918 3.405-.436 2.992-2.15l-1.06-4.39 3.468-2.938c1.353-1.146.633-3.336-1.142-3.477l-4.552-.36-1.754-4.17Z" />
-                </svg>
-                <svg class="w-4 h-4 text-yellow-300" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24"
-                  height="24" fill="currentColor" viewBox="0 0 24 24">
-                  <path
-                    d="M13.849 4.22c-.684-1.626-3.014-1.626-3.698 0L8.397 8.387l-4.552.361c-1.775.14-2.495 2.331-1.142 3.477l3.468 2.937-1.06 4.392c-.413 1.713 1.472 3.067 2.992 2.149L12 19.35l3.897 2.354c1.52.918 3.405-.436 2.992-2.15l-1.06-4.39 3.468-2.938c1.353-1.146.633-3.336-1.142-3.477l-4.552-.36-1.754-4.17Z" />
-                </svg>
-                <svg class="w-4 h-4 text-yellow-300" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24"
-                  height="24" fill="currentColor" viewBox="0 0 24 24">
-                  <path
-                    d="M13.849 4.22c-.684-1.626-3.014-1.626-3.698 0L8.397 8.387l-4.552.361c-1.775.14-2.495 2.331-1.142 3.477l3.468 2.937-1.06 4.392c-.413 1.713 1.472 3.067 2.992 2.149L12 19.35l3.897 2.354c1.52.918 3.405-.436 2.992-2.15l-1.06-4.39 3.468-2.938c1.353-1.146.633-3.336-1.142-3.477l-4.552-.36-1.754-4.17Z" />
-                </svg>
-              </div>
-              <p class="text-sm font-medium leading-none text-gray-500 dark:text-gray-400">
-                (5.0)
+          <div class="mt-6 sm:mt-8 lg:mt-0">
+            <h4 class="text-gray-900 dark:text-white">
+              Thực phẩm bảo vệ sức khỏe
+            </h4>
+            <h1
+              class="text-xl font-semibold text-gray-900 sm:text-5xl dark:text-white"
+            >
+              GROWSURE PLUS EXTRA
+            </h1>
+            <div class="mt-4 sm:items-center sm:gap-4 sm:flex">
+              <p
+                class="text-2xl font-extrabold text-gray-900 sm:text-3xl dark:text-white"
+              >
+                125.000 VNĐ
               </p>
-              <a href="#"
-                class="text-sm font-medium leading-none text-gray-900 underline hover:no-underline dark:text-white">
-                63,345 Reviews
-              </a>
+
+              <div class="flex items-center gap-2 mt-2 sm:mt-0">
+                <div class="flex items-center gap-1">
+                  <svg
+                    class="w-4 h-4 text-yellow-300"
+                    aria-hidden="true"
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="24"
+                    height="24"
+                    fill="currentColor"
+                    viewBox="0 0 24 24"
+                  >
+                    <path
+                      d="M13.849 4.22c-.684-1.626-3.014-1.626-3.698 0L8.397 8.387l-4.552.361c-1.775.14-2.495 2.331-1.142 3.477l3.468 2.937-1.06 4.392c-.413 1.713 1.472 3.067 2.992 2.149L12 19.35l3.897 2.354c1.52.918 3.405-.436 2.992-2.15l-1.06-4.39 3.468-2.938c1.353-1.146.633-3.336-1.142-3.477l-4.552-.36-1.754-4.17Z"
+                    />
+                  </svg>
+                  <svg
+                    class="w-4 h-4 text-yellow-300"
+                    aria-hidden="true"
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="24"
+                    height="24"
+                    fill="currentColor"
+                    viewBox="0 0 24 24"
+                  >
+                    <path
+                      d="M13.849 4.22c-.684-1.626-3.014-1.626-3.698 0L8.397 8.387l-4.552.361c-1.775.14-2.495 2.331-1.142 3.477l3.468 2.937-1.06 4.392c-.413 1.713 1.472 3.067 2.992 2.149L12 19.35l3.897 2.354c1.52.918 3.405-.436 2.992-2.15l-1.06-4.39 3.468-2.938c1.353-1.146.633-3.336-1.142-3.477l-4.552-.36-1.754-4.17Z"
+                    />
+                  </svg>
+                  <svg
+                    class="w-4 h-4 text-yellow-300"
+                    aria-hidden="true"
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="24"
+                    height="24"
+                    fill="currentColor"
+                    viewBox="0 0 24 24"
+                  >
+                    <path
+                      d="M13.849 4.22c-.684-1.626-3.014-1.626-3.698 0L8.397 8.387l-4.552.361c-1.775.14-2.495 2.331-1.142 3.477l3.468 2.937-1.06 4.392c-.413 1.713 1.472 3.067 2.992 2.149L12 19.35l3.897 2.354c1.52.918 3.405-.436 2.992-2.15l-1.06-4.39 3.468-2.938c1.353-1.146.633-3.336-1.142-3.477l-4.552-.36-1.754-4.17Z"
+                    />
+                  </svg>
+                  <svg
+                    class="w-4 h-4 text-yellow-300"
+                    aria-hidden="true"
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="24"
+                    height="24"
+                    fill="currentColor"
+                    viewBox="0 0 24 24"
+                  >
+                    <path
+                      d="M13.849 4.22c-.684-1.626-3.014-1.626-3.698 0L8.397 8.387l-4.552.361c-1.775.14-2.495 2.331-1.142 3.477l3.468 2.937-1.06 4.392c-.413 1.713 1.472 3.067 2.992 2.149L12 19.35l3.897 2.354c1.52.918 3.405-.436 2.992-2.15l-1.06-4.39 3.468-2.938c1.353-1.146.633-3.336-1.142-3.477l-4.552-.36-1.754-4.17Z"
+                    />
+                  </svg>
+                  <svg
+                    class="w-4 h-4 text-yellow-300"
+                    aria-hidden="true"
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="24"
+                    height="24"
+                    fill="currentColor"
+                    viewBox="0 0 24 24"
+                  >
+                    <path
+                      d="M13.849 4.22c-.684-1.626-3.014-1.626-3.698 0L8.397 8.387l-4.552.361c-1.775.14-2.495 2.331-1.142 3.477l3.468 2.937-1.06 4.392c-.413 1.713 1.472 3.067 2.992 2.149L12 19.35l3.897 2.354c1.52.918 3.405-.436 2.992-2.15l-1.06-4.39 3.468-2.938c1.353-1.146.633-3.336-1.142-3.477l-4.552-.36-1.754-4.17Z"
+                    />
+                  </svg>
+                </div>
+                <p
+                  class="text-sm font-medium leading-none text-gray-500 dark:text-gray-400"
+                >
+                  (5.0)
+                </p>
+                <a
+                  href="#"
+                  class="text-sm font-medium leading-none text-gray-900 underline hover:no-underline dark:text-white"
+                >
+                  63,345 Reviews
+                </a>
+              </div>
             </div>
+
+            <div
+              class="mt-6 sm:gap-4 sm:items-center sm:flex sm:mt-8 add-container"
+            >
+              <a
+                href="#"
+                title=""
+                class="flex items-center justify-center py-2.5 px-5 text-sm font-medium text-gray-900 focus:outline-none bg-white rounded-lg border border-gray-200 hover:bg-gray-100 hover:text-primary-700 focus:z-10 focus:ring-4 focus:ring-gray-100 dark:focus:ring-gray-700 dark:bg-gray-800 dark:text-gray-400 dark:border-gray-600 dark:hover:text-white dark:hover:bg-gray-700"
+                role="button"
+              >
+                <svg
+                  class="w-5 h-5 -ms-2 me-2"
+                  aria-hidden="true"
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="24"
+                  height="24"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                >
+                  <path
+                    stroke="currentColor"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="2"
+                    d="M12.01 6.001C6.5 1 1 8 5.782 13.001L12.011 20l6.23-7C23 8 17.5 1 12.01 6.002Z"
+                  />
+                </svg>
+                Add to favorites
+              </a>
+              <button
+                onclick="openOrderForm()"
+                type=" button"
+                class="add-to-card flex items-center justify-center text-white bg-blue-700 hover:bg-blue-800 focus:outline-none focus:ring-4 focus:ring-blue-300 font-medium rounded-full text-sm px-5 py-2.5 text-center me-2 mb-2 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800"
+              >
+                Đặt hàng ngay
+              </button>
+            </div>
+
+            <hr class="my-6 md:my-8 border-gray-200 dark:border-gray-800" />
+
+            <p class="mb-6 text-gray-500 dark:text-gray-400">
+              <b>CÔNG DỤNG</b>
+              Hỗ trợ ăn ngủ ngon, giảm mệt mỏi do kém ăn, thiếu ngủ. Giúp tăng
+              trưởng và phát triển trí não nhờ bổ sung cao men bia, Taurin, DHA,
+              Thymo, L-Lysin, Hồng Sâm... Với nguyên liệu nhập khẩu. Bổ sung hàm
+              lượng Calcium Glucoheptonat nhập khẩu Pháp & vitamin D3 với tỷ lệ
+              hợp lý, giúp trẻ phát triển chiều cao, xương chắc khoẻ.
+            </p>
+            <p class="mb-6 text-gray-500 dark:text-gray-400">
+              <b>ĐỐI TƯỢNG SỬ DỤNG:</b>
+              Trẻ em và người lớn chán ăn, ăn không ngon, người mệt mỏi do thiếu
+              ngủ.
+            </p>
+            <p class="mb-6 text-gray-500 dark:text-gray-400">
+              Thể tích thực: 125ml/chai ± 7,5%.<br />
+              Tiêu chuẩn: TCCS |
+              <a href="./images/GDK_Growsure_Plus_Extra.jpg"
+                >Số ĐKSP: 9395/2021/ĐKSP</a
+              >
+              <br />
+            </p>
           </div>
-
-          <div class="mt-6 sm:gap-4 sm:items-center sm:flex sm:mt-8 add-container">
-            <a href="#" title=""
-              class="flex items-center justify-center py-2.5 px-5 text-sm font-medium text-gray-900 focus:outline-none bg-white rounded-lg border border-gray-200 hover:bg-gray-100 hover:text-primary-700 focus:z-10 focus:ring-4 focus:ring-gray-100 dark:focus:ring-gray-700 dark:bg-gray-800 dark:text-gray-400 dark:border-gray-600 dark:hover:text-white dark:hover:bg-gray-700"
-              role="button">
-              <svg class="w-5 h-5 -ms-2 me-2" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24"
-                height="24" fill="none" viewBox="0 0 24 24">
-                <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                  d="M12.01 6.001C6.5 1 1 8 5.782 13.001L12.011 20l6.23-7C23 8 17.5 1 12.01 6.002Z" />
-              </svg>
-              Add to favorites
-            </a>
-            <button onclick="openOrderForm()" type=" button"
-              class="add-to-card flex items-center justify-center text-white bg-blue-700 hover:bg-blue-800 focus:outline-none focus:ring-4 focus:ring-blue-300 font-medium rounded-full text-sm px-5 py-2.5 text-center me-2 mb-2 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">
-              Đặt hàng ngay
-            </button>
-          </div>
-
-          <hr class="my-6 md:my-8 border-gray-200 dark:border-gray-800" />
-
-          <p class="mb-6 text-gray-500 dark:text-gray-400">
-            <b>CÔNG DỤNG</b>
-            Hỗ trợ ăn ngủ ngon, giảm mệt mỏi do kém ăn, thiếu ngủ.
-            Giúp tăng trưởng và phát triển trí não nhờ bổ sung cao men bia, Taurin, DHA, Thymo, L-Lysin, Hồng Sâm... Với
-            nguyên liệu nhập khẩu.
-            Bổ sung hàm lượng Calcium Glucoheptonat nhập khẩu Pháp & vitamin D3 với tỷ lệ hợp lý, giúp trẻ phát triển
-            chiều cao, xương chắc khoẻ.
-          </p>
-          <p class="mb-6 text-gray-500 dark:text-gray-400">
-            <b>ĐỐI TƯỢNG SỬ DỤNG:</b>
-            Trẻ em và người lớn chán ăn, ăn không ngon, người mệt mỏi do thiếu ngủ.
-          </p>
-          <p class="mb-6 text-gray-500 dark:text-gray-400">
-            Thể tích thực: 125ml/chai ± 7,5%.<br />
-            Tiêu chuẩn: TCCS |
-            <a href="./images/GDK_Growsure_Plus_Extra.jpg">Số ĐKSP: 9395/2021/ĐKSP</a>
-            <br />
-          </p>
         </div>
       </div>
-    </div>
-  </section>
+    </section>
 
-  <!-- Gradient - Change the colour #f8fafc to match the previous section colour -->
-  <svg class="wave-top" viewBox="0 0 1439 147" version="1.1" xmlns="http://www.w3.org/2000/svg"
-    xmlns:xlink="http://www.w3.org/1999/xlink">
-    <g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
-      <g transform="translate(-1.000000, -14.000000)" fill-rule="nonzero">
-        <g class="wave" fill="#f8fafc">
-          <path
-            d="M1440,84 C1383.555,64.3 1342.555,51.3 1317,45 C1259.5,30.824 1206.707,25.526 1169,22 C1129.711,18.326 1044.426,18.475 980,22 C954.25,23.409 922.25,26.742 884,32 C845.122,37.787 818.455,42.121 804,45 C776.833,50.41 728.136,61.77 713,65 C660.023,76.309 621.544,87.729 584,94 C517.525,105.104 484.525,106.438 429,108 C379.49,106.484 342.823,104.484 319,102 C278.571,97.783 231.737,88.736 205,84 C154.629,75.076 86.296,57.743 0,32 L0,0 L1440,0 L1440,84 Z">
-          </path>
-        </g>
-        <g transform="translate(1.000000, 15.000000)" fill="#FFFFFF">
-          <g transform="translate(719.500000, 68.500000) rotate(-180.000000) translate(-719.500000, -68.500000) ">
+    <!-- Gradient - Change the colour #f8fafc to match the previous section colour -->
+    <svg
+      class="wave-top"
+      viewBox="0 0 1439 147"
+      version="1.1"
+      xmlns="http://www.w3.org/2000/svg"
+      xmlns:xlink="http://www.w3.org/1999/xlink"
+    >
+      <g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g transform="translate(-1.000000, -14.000000)" fill-rule="nonzero">
+          <g class="wave" fill="#f8fafc">
             <path
-              d="M0,0 C90.7283404,0.927527913 147.912752,27.187927 291.910178,59.9119003 C387.908462,81.7278826 543.605069,89.334785 759,82.7326078 C469.336065,156.254352 216.336065,153.6679 0,74.9732496"
-              opacity="0.100000001"></path>
-            <path
-              d="M100,104.708498 C277.413333,72.2345949 426.147877,52.5246657 546.203633,45.5787101 C666.259389,38.6327546 810.524845,41.7979068 979,55.0741668 C931.069965,56.122511 810.303266,74.8455141 616.699903,111.243176 C423.096539,147.640838 250.863238,145.462612 100,104.708498 Z"
-              opacity="0.100000001"></path>
-            <path
-              d="M1046,51.6521276 C1130.83045,29.328812 1279.08318,17.607883 1439,40.1656806 L1439,120 C1271.17211,77.9435312 1140.17211,55.1609071 1046,51.6521276 Z"
-              opacity="0.200000003"></path>
+              d="M1440,84 C1383.555,64.3 1342.555,51.3 1317,45 C1259.5,30.824 1206.707,25.526 1169,22 C1129.711,18.326 1044.426,18.475 980,22 C954.25,23.409 922.25,26.742 884,32 C845.122,37.787 818.455,42.121 804,45 C776.833,50.41 728.136,61.77 713,65 C660.023,76.309 621.544,87.729 584,94 C517.525,105.104 484.525,106.438 429,108 C379.49,106.484 342.823,104.484 319,102 C278.571,97.783 231.737,88.736 205,84 C154.629,75.076 86.296,57.743 0,32 L0,0 L1440,0 L1440,84 Z"
+            ></path>
+          </g>
+          <g transform="translate(1.000000, 15.000000)" fill="#FFFFFF">
+            <g
+              transform="translate(719.500000, 68.500000) rotate(-180.000000) translate(-719.500000, -68.500000) "
+            >
+              <path
+                d="M0,0 C90.7283404,0.927527913 147.912752,27.187927 291.910178,59.9119003 C387.908462,81.7278826 543.605069,89.334785 759,82.7326078 C469.336065,156.254352 216.336065,153.6679 0,74.9732496"
+                opacity="0.100000001"
+              ></path>
+              <path
+                d="M100,104.708498 C277.413333,72.2345949 426.147877,52.5246657 546.203633,45.5787101 C666.259389,38.6327546 810.524845,41.7979068 979,55.0741668 C931.069965,56.122511 810.303266,74.8455141 616.699903,111.243176 C423.096539,147.640838 250.863238,145.462612 100,104.708498 Z"
+                opacity="0.100000001"
+              ></path>
+              <path
+                d="M1046,51.6521276 C1130.83045,29.328812 1279.08318,17.607883 1439,40.1656806 L1439,120 C1271.17211,77.9435312 1140.17211,55.1609071 1046,51.6521276 Z"
+                opacity="0.200000003"
+              ></path>
+            </g>
           </g>
         </g>
       </g>
-    </g>
-  </svg>
-  <!--Form-->
-  <section class="container mx-auto text-center py-6 mb-12" id="contact">
-    <div class="py-8 px-4 mx-auto max-w-screen-xl lg:py-16 lg:px-6">
-      <div class="mx-auto max-w-screen-md sm:text-center">
-        <h2 class="w-full my-2 text-5xl font-bold leading-tight text-center text-white">
-          HỢP TÁC KINH DOANH
-        </h2>
-        <div class="w-full mb-4">
-          <div class="h-1 mx-auto bg-white w-1/6 opacity-25 my-0 py-0 rounded-t"></div>
+    </svg>
+    <!--Form-->
+    <section class="container mx-auto text-center py-6 mb-12" id="contact">
+      <div class="py-8 px-4 mx-auto max-w-screen-xl lg:py-16 lg:px-6">
+        <div class="mx-auto max-w-screen-md sm:text-center">
+          <h2
+            class="w-full my-2 text-5xl font-bold leading-tight text-center text-white"
+          >
+            HỢP TÁC KINH DOANH
+          </h2>
+          <div class="w-full mb-4">
+            <div
+              class="h-1 mx-auto bg-white w-1/6 opacity-25 my-0 py-0 rounded-t"
+            ></div>
+          </div>
+          <h3 class="my-4 text-3xl leading-tight">
+            Trở thành đối tác - đại lý - cộng tác viên của HaB
+          </h3>
+          <form action="#">
+            <div
+              class="items-center mx-auto mb-3 space-y-4 max-w-screen-sm sm:flex sm:space-y-0"
+            >
+              <div class="relative w-2/5">
+                <label
+                  for="phoneNumber"
+                  class="hidden mb-2 text-sm font-medium text-gray-900 dark:text-gray-300"
+                  >Số điện thoại</label
+                >
+                <input
+                  class="block p-3 pl-10 w-full text-sm text-gray-900 bg-gray-50 rounded-lg border border-gray-300 sm:rounded-none sm:rounded-lg focus:ring-primary-500 focus:border-primary-500 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-primary-500 dark:focus:border-primary-500"
+                  placeholder="Nhập số điện thoại"
+                  type="number"
+                  id="phoneNumber"
+                  required
+                />
+              </div>
+              <div class="relative w-2/5">
+                <label
+                  for="message"
+                  class="hidden mb-2 text-sm font-medium text-gray-900 dark:text-gray-300"
+                  >Nội dung lời nhắn</label
+                >
+                <input
+                  class="block p-3 pl-10 w-full text-sm text-gray-900 bg-gray-50 rounded-lg border border-gray-300 sm:rounded-none sm:rounded-lg focus:ring-primary-500 focus:border-primary-500 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-primary-500 dark:focus:border-primary-500"
+                  placeholder="Nội dung lời nhắn"
+                  type="text"
+                  id="message"
+                  required
+                />
+              </div>
+              <div class="w-1/5">
+                <button
+                  type="submit"
+                  class="py-3 px-5 w-full text-sm font-medium text-center text-white rounded-lg border cursor-pointer bg-primary-700 border-primary-600 sm:rounded-none sm:rounded-lg hover:bg-primary-800 focus:ring-4 focus:ring-primary-300 dark:bg-primary-600 dark:hover:bg-primary-700 dark:focus:ring-primary-800"
+                >
+                  Gửi
+                </button>
+              </div>
+            </div>
+            <div
+              class="mx-auto max-w-screen-sm text-sm text-left text-white-900 newsletter-form-footer dark:text-gray-500"
+            >
+              We care about the protection of your data.
+              <a
+                href="#"
+                class="font-medium text-primary-600 dark:text-primary-500 hover:underline"
+                >Read our Privacy Policy</a
+              >.
+            </div>
+          </form>
         </div>
-        <h3 class="my-4 text-3xl leading-tight">
-          Trở thành đối tác - đại lý - cộng tác viên của HaB
-        </h3>
-        <form action="#">
-          <div class="items-center mx-auto mb-3 space-y-4 max-w-screen-sm sm:flex sm:space-y-0">
-            <div class="relative w-full">
-              <label for="email" class="hidden mb-2 text-sm font-medium text-gray-900 dark:text-gray-300">Số điện
-                thoại</label>
-              <input
-                class="block p-3 pl-10 w-full text-sm text-gray-900 bg-gray-50 rounded-lg border border-gray-300 sm:rounded-none sm:rounded-l-lg focus:ring-primary-500 focus:border-primary-500 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-primary-500 dark:focus:border-primary-500"
-                placeholder="Nhập số điện thoại" type="number" id="phoneNumber" required="">
-            </div>
-            <div>
-              <button type="submit"
-                class="py-3 px-5 w-full text-sm font-medium text-center text-white rounded-lg border cursor-pointer bg-primary-700 border-primary-600 sm:rounded-none sm:rounded-r-lg hover:bg-primary-800 focus:ring-4 focus:ring-primary-300 dark:bg-primary-600 dark:hover:bg-primary-700 dark:focus:ring-primary-800">
-                Gửi
-              </button>
-            </div>
-          </div>
-          <div
-            class="mx-auto max-w-screen-sm text-sm text-left text-white-900 newsletter-form-footer dark:text-gray-500">
-            We care about the protection of your data. <a href="#"
-              class="font-medium text-primary-600 dark:text-primary-500 hover:underline">Read our Privacy Policy</a>.
-          </div>
-        </form>
       </div>
-    </div>
-    <!-- <h2 class="w-full my-2 text-5xl font-bold leading-tight text-center text-white">
+      <!-- <h2 class="w-full my-2 text-5xl font-bold leading-tight text-center text-white">
       Call to Action
     </h2>
     <div class="w-full mb-4">
@@ -769,111 +1030,154 @@
       class="mx-auto lg:mx-0 hover:underline bg-white text-gray-800 font-bold rounded-full my-6 py-4 px-8 shadow-lg focus:outline-none focus:shadow-outline transform transition hover:scale-105 duration-300 ease-in-out">
       Action!
     </button> -->
-  </section>
-  <!--Footer-->
-  <footer class="bg-white ">
-    <div class="w-full max-w-screen-xl mx-auto p-4 md:py-8">
-      <hr class="my-6 border-gray-200 sm:mx-auto dark:border-gray-700 lg:my-8" />
-      <span class="block text-sm text-gray-500 sm:text-center dark:text-gray-400">© 2023 HaB Design Team™
-        All Rights Reserved.</span>
-    </div>
-  </footer>
-  <!-- jQuery if you need it (or not)
+    </section>
+    <!--Footer-->
+    <footer class="bg-white">
+      <div class="w-full max-w-screen-xl mx-auto p-4 md:py-8">
+        <hr
+          class="my-6 border-gray-200 sm:mx-auto dark:border-gray-700 lg:my-8"
+        />
+        <span
+          class="block text-sm text-gray-500 sm:text-center dark:text-gray-400"
+          >© 2023 HaB Design Team™ All Rights Reserved.</span
+        >
+      </div>
+    </footer>
+    <!-- jQuery if you need it (or not)
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
   -->
-  <script>
-    function openOrderForm() {
-      var link = document.createElement("a");
-      link.href = "./orderPage.html";
-      // link.target = "_blank";
-      link.click();
-    }
-
-    function openLink() {
-      var link = document.createElement("a");
-      link.href = "#contact";
-      // link.target = "_blank";
-      link.click();
-    }
-
-    var scrollpos = window.scrollY;
-    var header = document.getElementById("header");
-    var navcontent = document.getElementById("nav-content");
-    var navaction = document.getElementById("navAction");
-    var brandname = document.getElementById("brandname");
-    var toToggle = document.querySelectorAll(".toggleColour");
-
-    document.addEventListener("scroll", function () {
-      /*Apply classes for slide in bar*/
-      scrollpos = window.scrollY;
-
-      if (scrollpos > 10) {
-        header.classList.add("bg-white");
-        navaction.classList.remove("bg-white");
-        navaction.classList.add("gradient");
-        navaction.classList.remove("text-gray-800");
-        navaction.classList.add("text-white");
-        //Use to switch toggleColour colours
-        for (var i = 0; i < toToggle.length; i++) {
-          toToggle[i].classList.add("text-gray-800");
-          toToggle[i].classList.remove("text-white");
-        }
-        header.classList.add("shadow");
-        navcontent.classList.remove("bg-gray-100");
-        navcontent.classList.add("bg-white");
-      } else {
-        header.classList.remove("bg-white");
-        navaction.classList.remove("gradient");
-        navaction.classList.add("bg-white");
-        navaction.classList.remove("text-white");
-        navaction.classList.add("text-gray-800");
-        //Use to switch toggleColour colours
-        for (var i = 0; i < toToggle.length; i++) {
-          toToggle[i].classList.add("text-white");
-          toToggle[i].classList.remove("text-gray-800");
-        }
-
-        header.classList.remove("shadow");
-        navcontent.classList.remove("bg-white");
-        navcontent.classList.add("bg-gray-100");
+    <script>
+      window.onbeforeunload = function () {
+        window.scrollTo(0, 0);
+      };
+      function openOrderForm() {
+        var link = document.createElement("a");
+        link.href = "./orderPage.html";
+        // link.target = "_blank";
+        link.click();
       }
-    });
-  </script>
-  <script>
-    /*Toggle dropdown list*/
-    var navMenuDiv = document.getElementById("nav-content");
-    var navMenu = document.getElementById("nav-toggle");
 
-    document.onclick = check;
-    function check(e) {
-      var target = (e && e.target) || (event && event.srcElement);
+      function openLink() {
+        var link = document.createElement("a");
+        link.href = "#contact";
+        // link.target = "_blank";
+        link.click();
+      }
 
-      //Nav Menu
-      if (!checkParent(target, navMenuDiv)) {
-        // click NOT on the menu
-        if (checkParent(target, navMenu)) {
-          // click on the link
-          if (navMenuDiv.classList.contains("hidden")) {
-            navMenuDiv.classList.remove("hidden");
-          } else {
-            navMenuDiv.classList.add("hidden");
+      var scrollpos = window.scrollY;
+      var header = document.getElementById("header");
+      var navcontent = document.getElementById("nav-content");
+      var navaction = document.getElementById("navAction");
+      var brandname = document.getElementById("brandname");
+      var toToggle = document.querySelectorAll(".toggleColour");
+      var navTextList = document.querySelectorAll("#nav-text");
+      let width = screen.width;
+      window.onload = function () {
+        if (width < 1024) {
+          for (var i = 0; i < navTextList.length; i++) {
+            navTextList[i].classList.remove("text-white");
+            navTextList[i].classList.add("text-black");
           }
         } else {
-          // click both outside link and outside menu, hide menu
-          navMenuDiv.classList.add("hidden");
+          for (var i = 0; i < navTextList.length; i++) {
+            navTextList[i].classList.remove("text-black");
+            navTextList[i].classList.add("text-white");
+          }
         }
-      }
-    }
-    function checkParent(t, elm) {
-      while (t.parentNode) {
-        if (t == elm) {
-          return true;
-        }
-        t = t.parentNode;
-      }
-      return false;
-    }
-  </script>
-</body>
+      };
 
+      document.addEventListener("scroll", function () {
+        /*Apply classes for slide in bar*/
+        scrollpos = window.scrollY;
+
+        if (scrollpos > 10) {
+          header.classList.add("bg-white");
+          navaction.classList.remove("bg-white");
+          navaction.classList.add("gradient");
+          navaction.classList.remove("text-gray-800");
+          navaction.classList.add("text-white");
+          //Use to switch toggleColour colours
+          for (var i = 0; i < toToggle.length; i++) {
+            toToggle[i].classList.add("text-gray-800");
+            toToggle[i].classList.remove("text-white");
+          }
+          header.classList.add("shadow");
+          navcontent.classList.remove("bg-gray-100");
+          navcontent.classList.add("bg-white");
+          if (width < 1024) {
+            for (var i = 0; i < navTextList.length; i++) {
+              navTextList[i].classList.remove("text-white");
+              navTextList[i].classList.add("text-black");
+            }
+          } else {
+            for (var i = 0; i < navTextList.length; i++) {
+              navTextList[i].classList.remove("text-white");
+              navTextList[i].classList.add("text-black");
+            }
+          }
+        } else {
+          if (width < 1024) {
+            for (var i = 0; i < navTextList.length; i++) {
+              navTextList[i].classList.remove("text-white");
+              navTextList[i].classList.add("text-black");
+            }
+          } else {
+            for (var i = 0; i < navTextList.length; i++) {
+              navTextList[i].classList.remove("text-black");
+              navTextList[i].classList.add("text-white");
+            }
+          }
+          header.classList.remove("bg-white");
+          navaction.classList.remove("gradient");
+          navaction.classList.add("bg-white");
+          navaction.classList.remove("text-white");
+          navaction.classList.add("text-gray-800");
+          //Use to switch toggleColour colours
+          for (var i = 0; i < toToggle.length; i++) {
+            toToggle[i].classList.add("text-white");
+            toToggle[i].classList.remove("text-gray-800");
+          }
+
+          header.classList.remove("shadow");
+          navcontent.classList.remove("bg-white");
+          navcontent.classList.add("bg-gray-100");
+        }
+      });
+    </script>
+    <script>
+      /*Toggle dropdown list*/
+      var navMenuDiv = document.getElementById("nav-content");
+      var navMenu = document.getElementById("nav-toggle");
+
+      document.onclick = check;
+      function check(e) {
+        var target = (e && e.target) || (event && event.srcElement);
+
+        //Nav Menu
+        if (!checkParent(target, navMenuDiv)) {
+          // click NOT on the menu
+          if (checkParent(target, navMenu)) {
+            // click on the link
+            if (navMenuDiv.classList.contains("hidden")) {
+              navMenuDiv.classList.remove("hidden");
+            } else {
+              navMenuDiv.classList.add("hidden");
+            }
+          } else {
+            // click both outside link and outside menu, hide menu
+            navMenuDiv.classList.add("hidden");
+          }
+        }
+      }
+      function checkParent(t, elm) {
+        while (t.parentNode) {
+          if (t == elm) {
+            return true;
+          }
+          t = t.parentNode;
+        }
+        return false;
+      }
+    </script>
+  </body>
 </html>
